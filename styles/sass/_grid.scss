@@ -1,0 +1,10 @@
+//No margin to the right on the last li, hence $columns-1
+@mixin grid($columns, $margin){
+  float: left;
+  width: ((100% - (($columns - 1) * $margin)) / $columns );
+  margin-right: $margin;
+  margin-bottom: $margin;
+  &:nth-child(#{$columns}n){
+    margin-right: 0;
+  }
+}

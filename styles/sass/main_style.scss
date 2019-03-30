@@ -1,0 +1,145 @@
+@import 'variables';
+@import 'mixins';
+@import "colors";
+@import 'grid';
+@import 'global';
+
+
+ .banner {
+   @include banner;
+ }
+
+ .mainArea {
+
+ }
+
+
+ #projects li{
+   @include grid(6, 2%);
+   list-style: none;
+   img {
+     width: 100%;
+   }
+   @include mediaQueries(576px, 0) {
+     @include grid(1, 2%);
+   }
+   @include mediaQueries(991px, 576px) {
+     @include grid(3, 2%);
+   }
+}
+
+
+ .colorsMap {
+   width: 100%;
+   height: auto;
+   h4 {
+     margin-top: 5%;
+   }
+ }
+
+
+
+ .m-button {
+   display: inline-block;
+   padding: .5em;
+   background: #ccc;
+   // color: #666;
+   width: 100px;
+   height: 50px;
+
+   @each $name, $colors in $buttons {
+     $bgcolor: nth($colors, 1);
+     $fontcolor: nth($colors, 2);
+
+     &--#{$name} {
+       content: $bgcolor;
+       background-color: $bgcolor;
+       color: $fontcolor;
+       width: 100px;
+       height: 50px;
+     }
+   }
+ }
+
+
+
+
+//Colors grid
+// .color-strips {
+//   display: table;
+//   font-size: 0.9rem;
+//   table-layout: fixed;
+//   width: 100%;
+// }
+
+// .color-strip {
+//   display: inline-block;
+//   padding: .5em;
+//   // background: #ccc;
+//   // color: #666;
+//   width: 100px;
+//   height: 50px;
+//
+//   @each $name, $colors in $colorsSample {
+//     $bgcolor: nth($colors, 1);
+//     // $fontcolor: nth($colors, 2);
+//
+//     .color-sample {
+//        display: table-cell;
+//        padding: 1rem 0.5rem;
+//        text-align: center;
+//        // vertical-align: middle;
+//      }
+//
+//     &--#{$name} {
+//       content: $bgcolor;
+//       background-color: $bgcolor;
+//       color: white;
+//       width: 100px;
+//       height: 50px;
+//     }
+//   }
+// }
+
+
+// .color-strip {
+//   display: table-row;
+//
+//   .color-sample {
+//     display: table-cell;
+//     padding: 1rem 0.5rem;
+//     text-align: center;
+//     // vertical-align: middle;
+//   }
+//
+//   @each $name, $colors in $colorsSample {
+//     $bgcolor: $colors;
+//     // $fontcolor: nth($colors, 2);
+//
+//     &--#{$name} {
+//       content: $bgcolor;
+//       background-color: $bgcolor;
+//       color: $offWhite;
+//       width: 100px;
+//       height: 50px;
+//     }
+//   }
+// }
+
+
+
+section:nth-child(1) {
+  min-height: 400px;
+}
+
+section {
+  margin: 5em 0;
+  height: auto;
+}
+
+
+
+
+ footer {
+   @include footer;
+ }

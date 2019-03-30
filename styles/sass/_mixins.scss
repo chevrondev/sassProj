@@ -1,0 +1,74 @@
+//MIXINS
+@import "variables";
+@import "colors";
+
+
+@mixin mediaQueries($args...){
+  @if length($args) == 1{
+    @media screen and (max-width: nth($args, 1)){
+      @content;
+    }
+  }
+  @if length($args) == 2{
+    @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)){
+      @content;
+    }
+  }
+}
+
+@mixin banner {
+  height: 23em;
+  width: 100%;
+  margin-bottom: 2em;
+  text-align: center;
+  background-color: darken($deepBlue, 2%);
+  @include mediaQueries(576px, 0){
+    text-align: center;
+    height: 9em;
+    &:after {
+      content: "Mobiles < 576px";
+      color: $offWhite;
+    }
+  }
+
+  h1 {
+    top: 1em;
+    right: 1em;
+    left: 1em;
+    font-size: $titleFontSize_xl;
+    font-family: $titleFont;
+    font-weight: bold;
+    position: absolute;
+    color: $hopbush;
+    @include mediaQueries (576px, 0){
+      margin: 0;
+      font-size: $titleFontSize_xs;
+    }
+  }
+}
+
+@mixin myIcons {
+  @each $name, $value in $icons {
+    .icon--#{$name} {
+      content: $value;
+    }
+  }
+}
+
+@mixin classes($map) {
+  @each $key, $val in $map {
+   .#{map-get($val, $name)} {
+     // Rules
+     content: $val;
+   }
+  }
+}
+
+@mixin footer {
+  width: 100%;
+
+  p {
+    text-align: center;
+    color: #f3ac9f;
+  }
+}

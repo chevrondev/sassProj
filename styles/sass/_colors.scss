@@ -1,0 +1,57 @@
+//COLOUR VARIABLES
+$deepBlue: #032f3e;
+$offWhite: #f2f2f2;
+$activeBg: #4CAF50;
+$grey_1: #333;
+$hopbush: #c69;
+$bouquet: #b37399;
+$venus: #998099;
+$patina: #699;
+$nebula: #d2e1dd;
+$white: #fff;
+$dawn-pink: #f2ece4;
+$wafer: #e1d7d2;
+$iron: #dadbdf;
+$regent-grey: #808c99;
+$pale-sky: #6b717f;
+$midnight-blue: #036;
+$contrast-color: teal;
+$warning-color: #fce473;
+$important-color: red;
+$information-color: blue;
+$offWite: #f2f2f2;
+
+ //COLOUR MAPS
+$red-map: (redLight: #e57373, redMedium: #f44336, redDark: #b71c1c);
+
+//LIGHTEN
+$black-color: lighten(black, 5%);
+
+//DARKEN
+$white-color: darken(white, 5%);
+
+// color: mix(#f00, #00f, 25%);
+// color: mix(#f00, #00f);
+
+
+// _m-buttons.scss
+$buttons: (
+  base: (#00f, #000),
+  prc10l: (lighten(#00f, 10), #000),
+  prc15l: (lighten(#00f, 15), #000),
+  prc20l: (lighten(#00f, 20), #000),
+  prc25l: (lighten(#00f, 25), #000),
+  prc30l: (lighten(#00f, 30), #000),
+  prc35l: (lighten(#00f, 35), #000),
+  prc40l: (lighten(#00f, 40), #000),
+  prc45l: (lighten(#00f, 45), #000),
+  prc5d: (darken(#00f, 5), #f2f2f2),
+  prc10d: (darken(#00f, 10), #f2f2f2),
+  prc15d: (darken(#00f, 15), #f2f2f2),
+  prc20d: (darken(#00f, 20), #f2f2f2),
+  prc25d: (darken(#00f, 25), #f2f2f2),
+  prc30d: (darken(#00f, 30), #f2f2f2),
+  prc35d: (darken(#00f, 35), #f2f2f2),
+  prc40d: (darken(#00f, 40), #f2f2f2),
+  prc45d: (darken(#00f, 45), #f2f2f2),
+);
